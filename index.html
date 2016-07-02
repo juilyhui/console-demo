@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		console.log("hello world!");
+		console.log("hello","world!");
+		console.log({foo: "bar", mested: {mested_value: "foobar"}})
+		// 占位符 ： 字符%s，整数%d或者%i，对象%o，浮点数%f
+		console.log("my name is %s nad i am %d years old, and this is an object: %o", "hui", 21, {foo: "bar"});
+		// %c css格式字符串
+		// %c 后面定义要输出的字符串，并且可以定义该字符串的样式
+		console.log("this is my %coutput!", "color: red; font-size: 33px;")
+
+
+		console.warn("this is a warn!");
+		console.error("this is a error!");
+		console.info("this is a info!");
+		console.debug("this is a debug!");
+
+		// console.assert(); 判断变量是否为真
+		console.assert("hello world!");  // 这样是不会输出任何信息的！
+
+		var abc = "undefind";
+		console.assert(abc, "abcabc");  // 这样也无法输出
+
+		var def = "my string";
+		// var def = undefined;
+		console.assert(def, "defdef");  // 这样也无法输出，如果 def = undefined ，报错 Assertion failed: defdef
+		console.log(def.toUpperCase());  // 输出   MY SRING , 如果 def = undefined ，会报错 Uncaught TypeError: Cannot read property 'toUpperCase' of undefined
+
+
+
+
+
+
+		// 信息分组
+		// for(var i=0; i< 100; i++){
+		// 	var num = Math.random() * 100;
+		// 	// console.log("Picking a random number!");
+		// 	// console.log("\tNumber greater than 10?", num > 10);
+		// 	// console.log("\tNumber greater than 50?", num > 50);
+			
+		// 	// console.group()会默认展开组；console.groupCollapsed()默认闭合组
+		// 	// console.group("Picking a random number!");
+		// 	console.groupCollapsed("Picking a random number!");
+		// 	console.log("Number greater than 10?", num > 10);
+		// 	console.log("Number greater than 50?", num > 50);
+		// 	// 嵌套 每个组为单位的内容必须有console.groupEnd()结尾
+		// 	console.groupCollapsed("this is inside group!");
+		// 	console.log("inside value");
+		// 	console.groupEnd();
+		// 	console.groupEnd();
+		// }
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		function Character(name, power) {
+			this.name = name;
+			this.power = power;
+		}
+
+		var buffy = new Character("buffy", "slayer");
+		var willow = new Character("willow", "witch");
+		var spike = new Character("spike", "vampire");
+
+		var chars = [buffy, willow, spike];
+		console.log(chars);
+		console.table(chars);
+
+
+		var charsByName = {
+			buffy: buffy,
+			willow: willow,
+			spike: spike
+		};
+		console.table(charsByName);
+		console.table(charsByName, ["power"]);
+		console.table(charsByName, ["name", "power"]);
+		console.table(charsByName, []);
+	</script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+</head>
+<body>
+	<script type="text/javascript">
+		// 计时功能，console.time()和console.timeEnd()用来显示代码的运行时间
+		console.time("createObjects");
+		var array = [];
+		for(var i= 0; i < 10000000; i++){
+			array.push({index: i});
+		}
+		console.timeEnd("createObjects");
+	</script>
+</body>
+</html>
